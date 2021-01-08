@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Campo Minato</title>
+  </head>
+  <body>
+
+   <script type="text/javascript">
+
+    //chiedere all’utente (100 - 16) volte di inserire un numero alla volta, sempre compreso tra 1 e 100.
+    function randomNumber(min, max){
+      var result = Math.floor(Math.random() * (max + 1 - min) + min);
+      return result;
+    }
+    console.log(randomNumber(1, 100));;
+
+
+    //generare 16 numeri casuali tra 1 e 100
+    function computerCasuali(){
+      var list = [];
+      for (var i = 0; i < 16; i++) {
+      list.push(randomNumber(1,100)); //// TODO: controlla che il numero non sia ripetuto
+      }
+      return list;
+    }
+    //controllo numero inserito
+    var numeriCasuali = computerCasuali();
+    console.log(computerCasuali());
+    var somma = 0;
+     var i = 0;
+     while (i < 16) {
+       var number = prompt('inserisci numero tra un e 1 e 100 uno alla volta!');
+       somma += parseInt(number);
+        i++;
+      }
+      console.log(somma);
+
+   </script>
+  </body>
+</html>
